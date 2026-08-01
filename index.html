@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المتحف الوطني اليمني — دليل المتحف الرقمي</title>
+  <meta name="description" content="الدليل الرقمي الرسمي للمتحف الوطني اليمني بصنعاء. استكشف 120 قطعة أثرية و8 حضارات يمنية عبر 15 قاعة عرض في 3 أدوار.">
+  <meta name="keywords" content="المتحف الوطني اليمني, حضارات اليمن, سبأ, معين, قتبان, حضرموت, حمير, آثار يمنية, صنعاء">
+  <meta name="author" content="Eng. Ammar Adel Al-Masouei">
+  <meta property="og:title" content="المتحف الوطني اليمني">
+  <meta property="og:description" content="استكشف 5000 عام من الحضارة اليمنية">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.4/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-media">
+        <img id="heroImage" src="" alt="صنعاء القديمة">
+      </div>
+      <div class="container-main">
+        <div class="hero-inner">
+          <span class="hero-eyebrow"><i class="fa-solid fa-star"></i> الدليل الرسمي للمتحف الوطني اليمني</span>
+          <h1>اكتشف <span class="accent">5000 عام</span> من الحضارة اليمنية</h1>
+          <p class="lead">من مملكة سبأ وسد مأرب العظيم إلى المخطوطات الإسلامية النادرة، استكشف كنوز المتحف الوطني اليمني بصنعاء.</p>
+          <div class="hero-actions">
+            <a href="exhibits.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-vault"></i> استكشف المعروضات</a>
+            <a href="civilizations.html" class="btn btn-outline btn-lg" style="border-color:#fff;color:#fff"><i class="fa-solid fa-landmark"></i> الحضارات</a>
+          </div>
+          <form class="hero-search" data-quick-search>
+            <input type="search" placeholder="ابحث عن قطعة، حضارة، مادة..." aria-label="البحث في المتحف">
+            <button class="btn btn-gold" type="submit" aria-label="بحث" title="بحث"><i class="fa-solid fa-magnifying-glass"></i><span class="d-none d-sm-inline ms-2">بحث</span></button>
+          </form>
+          <div class="hero-stats" id="heroStats"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floors strip -->
+    <div class="container-main">
+      <div class="floor-strip stagger">
+        <a href="floors.html#floor-1" class="floor-chip">
+          <span class="icon"><i class="fa-solid fa-landmark-dome"></i></span>
+          <span><h4>الدور الأول</h4><p>اليمن القديم — سبأ، معين، قتبان</p></span>
+        </a>
+        <a href="floors.html#floor-2" class="floor-chip">
+          <span class="icon" style="background:linear-gradient(135deg,#8a5a2b,#b07d3e)"><i class="fa-solid fa-mosque"></i></span>
+          <span><h4>الدور الثاني</h4><p>العصر الإسلامي — مخطوطات وعملات</p></span>
+        </a>
+        <a href="floors.html#floor-3" class="floor-chip">
+          <span class="icon" style="background:linear-gradient(135deg,#c9a227,#e3c25b);color:#12263a"><i class="fa-solid fa-hat-cowboy"></i></span>
+          <span><h4>الدور الثالث</h4><p>اليمن الحديث — تراث وأزياء وفن</p></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured exhibits -->
+    <section class="container-main py-4">
+      <div class="section-head d-flex flex-wrap justify-content-between align-items-end">
+        <div>
+          <h2 class="section-title">معروضات مميزة</h2>
+          <p class="lead">أبرز كنوز المتحف الوطني اليمني</p>
+        </div>
+        <a href="exhibits.html" class="btn btn-ghost">عرض الكل <i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+      <div class="swiper swiper-exhibits" data-featured data-limit="8" id="featuredSwiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- Gallery preview -->
+    <section class="container-main py-4">
+      <div class="section-head d-flex flex-wrap justify-content-between align-items-end">
+        <div>
+          <h2 class="section-title">معرض الصور</h2>
+          <p class="lead">لقطات من مقتنيات المتحف الوطني اليمني</p>
+        </div>
+        <a href="exhibits.html" class="btn btn-ghost">استكشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+      <div class="home-gallery" id="homeGallery">
+        <div class="skeleton" style="height:220px"></div>
+        <div class="skeleton" style="height:220px"></div>
+        <div class="skeleton" style="height:220px"></div>
+        <div class="skeleton" style="height:220px"></div>
+      </div>
+    </section>
+
+    <!-- Civilizations -->
+    <section class="py-4" style="background:var(--bg-soft)">
+      <div class="container-main">
+        <div class="section-head d-flex flex-wrap justify-content-between align-items-end">
+          <div>
+            <h2 class="section-title">الحضارات اليمنية</h2>
+            <p class="lead">ثماني حضارات صنعت مجد اليمن عبر العصور</p>
+          </div>
+          <a href="civilizations.html" class="btn btn-ghost">استكشف الحضارات <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div class="cards-grid" id="civPreviewGrid">
+          <div class="skeleton" style="height:300px"></div>
+          <div class="skeleton" style="height:300px"></div>
+          <div class="skeleton" style="height:300px"></div>
+          <div class="skeleton" style="height:300px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline preview -->
+    <section class="container-main py-4">
+      <div class="section-head d-flex flex-wrap justify-content-between align-items-end">
+        <div>
+          <h2 class="section-title">رحلة عبر الزمن</h2>
+          <p class="lead">محطات تاريخية في مسيرة الحضارة اليمنية</p>
+        </div>
+        <a href="timeline.html" class="btn btn-ghost">الخط الزمني الكامل <i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="timeline" id="homeTimeline"></div>
+        </div>
+        <div class="col-lg-6 d-flex flex-column gap-3">
+          <div class="glass-card hoverable">
+            <h3><i class="fa-solid fa-vault text-gold"></i> مجموعة المتحف</h3>
+            <p class="muted-text">120 قطعة أثرية نادرة من مختلف العصور اليمنية، معروضة في 15 قاعة تفاعلية عبر 3 أدوار.</p>
+          </div>
+          <div class="glass-card hoverable">
+            <h3><i class="fa-solid fa-headphones text-gold"></i> دليل صوتي</h3>
+            <p class="muted-text">استمع لقصص القطع الأثرية من خلال الدليل الصوتي التفاعلي المتاح على كل معروض.</p>
+          </div>
+          <div class="glass-card hoverable">
+            <h3><i class="fa-solid fa-map text-gold"></i> خريطة تفاعلية</h3>
+            <p class="muted-text">تنقل داخل قاعات المتحف بسهولة مع الخريطة التفاعلية والتنقل بين الأدوار.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Museum news -->
+    <section class="py-4" style="background:var(--bg-soft)">
+      <div class="container-main">
+        <div class="section-head">
+          <h2 class="section-title">أخبار المتحف</h2>
+          <p class="lead">آخر الفعاليات والأنشطة في المتحف الوطني اليمني</p>
+        </div>
+        <div class="cards-grid" id="newsGrid">
+          <div class="skeleton" style="height:280px"></div>
+          <div class="skeleton" style="height:280px"></div>
+          <div class="skeleton" style="height:280px"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.4/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الإدارة — المتحف الوطني اليمني</title>
+  <meta name="description" content="لوحة إدارة المتحف الوطني اليمني — إدارة القطع والمستخدمين والإحصائيات.">
+  <meta name="author" content="Eng. Ammar Adel Al-Masouei">
+  <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="adminRoot">
+    <header class="dash-header">
+      <div class="dash-header-inner">
+        <button class="dash-toggle" id="dashToggle" aria-label="فتح القائمة"><i class="fa-solid fa-bars"></i></button>
+        <span class="brand-name">المتحف الوطني اليمني</span>
+        <a class="btn btn-ghost btn-sm" href="index.html"><i class="fa-solid fa-house"></i> العودة للموقع</a>
+      </div>
+    </header>
+
+    <div class="dash-layout">
+      <aside class="dash-sidebar" id="dashSide">
+        <nav class="dash-nav">
+          <a class="dash-nav-link active" href="#dash-home"><i class="fa-solid fa-gauge-high"></i> لوحة المعلومات</a>
+          <a class="dash-nav-link" href="#dash-exhibits"><i class="fa-solid fa-vault"></i> القطع الأثرية</a>
+          <a class="dash-nav-link" href="#dash-civilizations"><i class="fa-solid fa-landmark"></i> الحضارات</a>
+          <a class="dash-nav-link" href="#dash-halls"><i class="fa-solid fa-door-open"></i> القاعات</a>
+          <a class="dash-nav-link" href="#dash-users"><i class="fa-solid fa-users"></i> المستخدمون</a>
+          <a class="dash-nav-link" href="#dash-categories"><i class="fa-solid fa-tags"></i> الأقسام</a>
+          <a class="dash-nav-link" href="#dash-gallery"><i class="fa-solid fa-images"></i> معرض الصور</a>
+          <a class="dash-nav-link" href="#dash-reports"><i class="fa-solid fa-file-chart-column"></i> التقارير</a>
+        </nav>
+      </aside>
+
+      <main class="dash-main">
+        <!-- Stats cards -->
+        <div class="dash-cards">
+          <div class="dash-card"><i class="fa-solid fa-vault"></i><div class="num" id="statArtifacts">0</div><div class="lbl">القطع الأثرية</div></div>
+          <div class="dash-card"><i class="fa-solid fa-landmark"></i><div class="num" id="statCivilizations">0</div><div class="lbl">الحضارات</div></div>
+          <div class="dash-card"><i class="fa-solid fa-door-open"></i><div class="num" id="statHalls">0</div><div class="lbl">القاعات</div></div>
+          <div class="dash-card"><i class="fa-solid fa-users"></i><div class="num" id="statUsers">0</div><div class="lbl">المستخدمون</div></div>
+        </div>
+
+        <!-- Charts row -->
+        <div class="row g-3 mb-4">
+          <div class="col-lg-4"><div class="dash-chart-card"><h5>القطع حسب الحضارة</h5><canvas id="chartCiv" height="200"></canvas></div></div>
+          <div class="col-lg-4"><div class="dash-chart-card"><h5>التوزيع حسب القسم</h5><canvas id="chartCat" height="200"></canvas></div></div>
+          <div class="col-lg-4"><div class="dash-chart-card"><h5>القطع حسب الدور</h5><canvas id="chartFloor" height="200"></canvas></div></div>
+        </div>
+
+        <!-- Recent exhibits table -->
+        <div class="dash-table-card">
+          <div class="dash-table-header">
+            <h5><i class="fa-solid fa-clock-rotate-left"></i> آخر القطع المضافة</h5>
+            <input id="tableSearch" type="search" placeholder="بحث في الجدول..." class="dash-search">
+          </div>
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead><tr><th>#</th><th>الصورة</th><th>الاسم</th><th>الحضارة</th><th>القسم</th><th>الحالة</th><th>إجراءات</th></tr></thead>
+              <tbody id="recentTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Users table -->
+        <div class="dash-table-card mt-3">
+          <div class="dash-table-header">
+            <h5><i class="fa-solid fa-users"></i> المستخدمون</h5>
+          </div>
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead><tr><th></th><th>الاسم</th><th>البريد</th><th>الدور</th><th>تاريخ الانضمام</th><th>إجراءات</th></tr></thead>
+              <tbody id="usersTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Categories + Upload -->
+        <div class="row g-3 mt-1">
+          <div class="col-lg-6">
+            <div class="dash-table-card">
+              <h5><i class="fa-solid fa-tags"></i> الأقسام</h5>
+              <div id="categoriesList" class="d-flex flex-wrap gap-2 mt-3"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="dash-table-card">
+              <h5><i class="fa-solid fa-cloud-arrow-up"></i> رفع الصور</h5>
+              <div class="upload-zone" id="dropzone">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>اسحب وأفلت الصور هنا أو اضغط للاختيار</p>
+                <span class="muted-text small">JPEG, PNG, WebP — حتى 10MB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

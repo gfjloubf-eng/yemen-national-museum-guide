@@ -1,0 +1,121 @@
+/* ============================================================
+   YEMEN NATIONAL MUSEUM GUIDE — animations.css
+   Keyframes & AOS animation overrides
+   Engineer: Eng. Ammar Adel Al-Masouei
+   ============================================================ */
+
+/* Slow zoom for hero background */
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
+/* Shimmer for skeleton loading */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Pop (for favorite buttons) */
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  70% { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+.pop-anim { animation: pop .45s ease; }
+
+/* Float (decorative) */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.float-anim { animation: floatY 5s ease-in-out infinite; }
+
+/* Pulse glow */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, .45); }
+  50% { box-shadow: 0 0 0 12px rgba(201, 162, 39, 0); }
+}
+.glow-pulse { animation: glowPulse 2.2s ease-in-out infinite; }
+
+/* Marquee for news ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+/* Rotate ornament */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow { animation: spinSlow 26s linear infinite; }
+
+/* Fancy underline reveal */
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Card entrance */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(30px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.card-in { animation: cardIn .6s ease both; }
+
+/* Stagger helper */
+.stagger > * { animation: cardIn .55s ease both; }
+.stagger > *:nth-child(1) { animation-delay: .02s; }
+.stagger > *:nth-child(2) { animation-delay: .07s; }
+.stagger > *:nth-child(3) { animation-delay: .12s; }
+.stagger > *:nth-child(4) { animation-delay: .17s; }
+.stagger > *:nth-child(5) { animation-delay: .22s; }
+.stagger > *:nth-child(6) { animation-delay: .27s; }
+.stagger > *:nth-child(7) { animation-delay: .32s; }
+.stagger > *:nth-child(8) { animation-delay: .37s; }
+.stagger > *:nth-child(9) { animation-delay: .42s; }
+.stagger > *:nth-child(10) { animation-delay: .47s; }
+.stagger > *:nth-child(11) { animation-delay: .52s; }
+.stagger > *:nth-child(12) { animation-delay: .57s; }
+
+/* Loading spinner */
+@keyframes spinnerRot {
+  to { transform: rotate(360deg); }
+}
+.spinner-lux {
+  width: 42px;
+  height: 42px;
+  border: 4px solid var(--stone-dark);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spinnerRot .8s linear infinite;
+  margin: 2rem auto;
+}
+
+/* AOS theme alignment (lightweight override) */
+[data-aos="fade-up"] { transform: translateY(30px); }
+[data-aos="fade-up"].aos-animate { transform: translateY(0); }
+[data-aos="fade-down"] { transform: translateY(-30px); }
+[data-aos="fade-down"].aos-animate { transform: translateY(0); }
+[data-aos="zoom-in"] { transform: scale(.92); }
+[data-aos="zoom-in"].aos-animate { transform: scale(1); }
+

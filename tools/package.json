@@ -1,0 +1,14 @@
+{
+  "name": "yemen-museum-asset-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asset organization tooling for Yemen National Museum web project",
+  "scripts": {
+    "scan": "node scan.js",
+    "process": "node process.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.4"
+  }
+}
+

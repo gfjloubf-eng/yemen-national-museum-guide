@@ -1,0 +1,79 @@
+ {
+  "users": [
+    {
+      "id": "u1",
+      "username": "visitor",
+      "password": "visitor123",
+      "name": "زائر المتحف",
+      "nameEn": "Museum Visitor",
+      "email": "visitor@ynm.gov.ye",
+      "role": "visitor",
+      "avatar": "fa-user",
+      "joined": "2024-01-15",
+      "favorites": [1, 5, 12, 34, 56],
+      "notes": [],
+      "preferences": { "lang": "ar", "theme": "light" }
+    },
+    {
+      "id": "u2",
+      "username": "researcher",
+      "password": "researcher123",
+      "name": "د. أمل الحضرمي",
+      "nameEn": "Dr. Amal Al-Hadhrami",
+      "email": "researcher@ynm.gov.ye",
+      "role": "researcher",
+      "avatar": "fa-user-graduate",
+      "joined": "2023-06-10",
+      "favorites": [2, 3, 8, 22, 45, 67, 89],
+      "notes": [
+        { "exhibitId": 2, "text": "مخطوطة مهمة تحتاج مزيداً من الدراسة للمقارنة بالمكتبة الشرقية", "date": "2024-08-01" },
+        { "exhibitId": 45, "text": "النقش يتطابق مع نص في الإكليل للهمداني", "date": "2024-08-15" }
+      ],
+      "preferences": { "lang": "ar", "theme": "light" }
+    },
+    {
+      "id": "u3",
+      "username": "admin",
+      "password": "admin123",
+      "name": "مدير المتحف",
+      "nameEn": "Museum Director",
+      "email": "admin@ynm.gov.ye",
+      "role": "admin",
+      "avatar": "fa-user-shield",
+      "joined": "2022-01-01",
+      "favorites": [],
+      "notes": [],
+      "preferences": { "lang": "ar", "theme": "light" },
+      "permissions": ["manage_users", "manage_artifacts", "manage_civilizations", "manage_halls", "manage_categories", "manage_gallery", "view_reports"]
+    },
+    {
+      "id": "u4",
+      "username": "curator",
+      "password": "curator123",
+      "name": "خالد السلامي",
+      "nameEn": "Khaled Al-Salami",
+      "email": "curator@ynm.gov.ye",
+      "role": "researcher",
+      "avatar": "fa-user-tie",
+      "joined": "2023-03-22",
+      "favorites": [11, 24, 33],
+      "notes": [],
+      "preferences": { "lang": "ar", "theme": "dark" }
+    }
+  ],
+  "roles": {
+    "visitor": {
+      "name": "زائر",
+      "features": ["تصفح", "بحث", "فلترة", "مفضلة", "خريطة", "تفاصيل القطع", "خط زمني"]
+    },
+    "researcher": {
+      "name": "متخصص/باحث",
+      "features": ["كل مزايا الزائر", "مراجع تاريخية", "مراجع علمية", "ببليوغرافيا", "صور إضافية", "ملاحظات بحثية"]
+    },
+    "admin": {
+      "name": "مدير النظام",
+      "features": ["لوحة إدارة", "إحصائيات", "إدارة المستخدمين", "إدارة القطع", "إدارة الحضارات", "إدارة القاعات", "إدارة الأقسام", "معرض الصور", "التقارير"]
+    }
+  }
+}
+

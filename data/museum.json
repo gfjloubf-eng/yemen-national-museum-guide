@@ -1,0 +1,1035 @@
+{
+  "meta": {
+    "name": "Yemen National Museum Guide",
+    "nameAr": "دليل المتحف الوطني اليمني",
+    "version": "3.0.0",
+    "description": "Official digital guide for the Yemen National Museum, Sana'a",
+    "engineer": "Eng. Ammar Adel Al-Masouei",
+    "established": 1971,
+    "city": "صنعاء",
+    "country": "الجمهورية اليمنية"
+  },
+  "stats": {
+    "artifacts": 120,
+    "civilizations": 8,
+    "halls": 15,
+    "floors": 3,
+    "events": 20,
+    "figures": 30,
+    "categories": 15,
+    "provinces": 13,
+    "visitorsYearly": 150000
+  },
+  "floors": [
+    {
+      "id": 1,
+      "name": "الدور الأول",
+      "nameEn": "Floor 1",
+      "theme": "اليمن القديم",
+      "themeEn": "Ancient Yemen",
+      "description": "الحضارات اليمنية القديمة: سبأ، معين، قتبان، أوسان، حضرموت، حمير",
+      "icon": "fa-landmark-dome",
+      "halls": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ],
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp",
+      "background": "assets/images/photos/photo-01.webp",
+      "heroImage": "assets/images/photos/photo-01.webp"
+    },
+    {
+      "id": 2,
+      "name": "الدور الثاني",
+      "nameEn": "Floor 2",
+      "theme": "العصر الإسلامي",
+      "themeEn": "Islamic Era",
+      "description": "المخطوطات، العملات، المصاحف، الأسلحة، الفخاريات الإسلامية",
+      "icon": "fa-mosque",
+      "halls": [
+        "h6",
+        "h7",
+        "h8",
+        "h9",
+        "h10"
+      ],
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp",
+      "background": "assets/images/photos/photo-24.webp",
+      "heroImage": "assets/images/photos/photo-24.webp"
+    },
+    {
+      "id": 3,
+      "name": "الدور الثالث",
+      "nameEn": "Floor 3",
+      "theme": "اليمن الحديث",
+      "themeEn": "Modern Yemen",
+      "description": "الأزياء التقليدية، التراث، الوثائق التاريخية، التصوير، الفن الحديث",
+      "icon": "fa-hat-cowboy",
+      "halls": [
+        "h11",
+        "h12",
+        "h13",
+        "h14",
+        "h15"
+      ],
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp",
+      "background": "assets/images/photos/photo-26.webp",
+      "heroImage": "assets/images/photos/photo-26.webp"
+    }
+  ],
+  "civilizations": [
+    {
+      "id": "saba",
+      "name": "سبأ",
+      "nameEn": "Saba",
+      "era": "1200 ق.م - 275 م",
+      "province": "مأرب",
+      "icon": "fa-crown"
+    },
+    {
+      "id": "main",
+      "name": "معين",
+      "nameEn": "Main",
+      "era": "800 ق.م - 100 م",
+      "province": "الجوف",
+      "icon": "fa-route"
+    },
+    {
+      "id": "qataban",
+      "name": "قتبان",
+      "nameEn": "Qataban",
+      "era": "600 ق.م - 200 م",
+      "province": "البيضاء",
+      "icon": "fa-temple"
+    },
+    {
+      "id": "awsan",
+      "name": "أوسان",
+      "nameEn": "Awsan",
+      "era": "800 ق.م - 500 ق.م",
+      "province": "أبين",
+      "icon": "fa-mountain"
+    },
+    {
+      "id": "hadramout",
+      "name": "حضرموت",
+      "nameEn": "Hadramout",
+      "era": "1000 ق.م - 300 م",
+      "province": "حضرموت",
+      "icon": "fa-tree"
+    },
+    {
+      "id": "himyar",
+      "name": "حمير",
+      "nameEn": "Himyar",
+      "era": "115 ق.م - 525 م",
+      "province": "ذمار",
+      "icon": "fa-gem"
+    },
+    {
+      "id": "islamic",
+      "name": "العصر الإسلامي",
+      "nameEn": "Islamic Era",
+      "era": "630 م - 1900 م",
+      "province": "صنعاء",
+      "icon": "fa-mosque"
+    },
+    {
+      "id": "modern",
+      "name": "اليمن الحديث",
+      "nameEn": "Modern Yemen",
+      "era": "1900 م - الآن",
+      "province": "صنعاء",
+      "icon": "fa-city"
+    }
+  ],
+  "categories": [
+    {
+      "id": "books",
+      "name": "كتب",
+      "nameEn": "Books",
+      "icon": "fa-book"
+    },
+    {
+      "id": "weapons",
+      "name": "أسلحة",
+      "nameEn": "Weapons",
+      "icon": "fa-gun"
+    },
+    {
+      "id": "coins",
+      "name": "عملات",
+      "nameEn": "Coins",
+      "icon": "fa-coins"
+    },
+    {
+      "id": "pottery",
+      "name": "فخاريات",
+      "nameEn": "Pottery",
+      "icon": "fa-jar"
+    },
+    {
+      "id": "jewelry",
+      "name": "حلي ومجوهرات",
+      "nameEn": "Jewelry",
+      "icon": "fa-ring"
+    },
+    {
+      "id": "clothes",
+      "name": "أزياء تقليدية",
+      "nameEn": "Traditional Clothes",
+      "icon": "fa-shirt"
+    },
+    {
+      "id": "statues",
+      "name": "تماثيل",
+      "nameEn": "Statues",
+      "icon": "fa-person"
+    },
+    {
+      "id": "inscriptions",
+      "name": "نقوش حجرية",
+      "nameEn": "Stone Inscriptions",
+      "icon": "fa-clipboard"
+    },
+    {
+      "id": "wood",
+      "name": "أخشاب",
+      "nameEn": "Wood",
+      "icon": "fa-tree"
+    },
+    {
+      "id": "copper",
+      "name": "نحاس",
+      "nameEn": "Copper",
+      "icon": "fa-circle"
+    },
+    {
+      "id": "bronze",
+      "name": "برونز",
+      "nameEn": "Bronze",
+      "icon": "fa-medal"
+    },
+    {
+      "id": "gold",
+      "name": "ذهب",
+      "nameEn": "Gold",
+      "icon": "fa-coins"
+    },
+    {
+      "id": "silver",
+      "name": "فضة",
+      "nameEn": "Silver",
+      "icon": "fa-circle"
+    },
+    {
+      "id": "documents",
+      "name": "وثائق تاريخية",
+      "nameEn": "Historical Documents",
+      "icon": "fa-scroll"
+    },
+    {
+      "id": "islamic_art",
+      "name": "فن إسلامي",
+      "nameEn": "Islamic Art",
+      "icon": "fa-star-and-crescent"
+    }
+  ],
+  "provinces": [
+    "صنعاء",
+    "عدن",
+    "تعز",
+    "الحديدة",
+    "إب",
+    "ذمار",
+    "مأرب",
+    "الجوف",
+    "حضرموت",
+    "شبوة",
+    "أبين",
+    "لحج",
+    "المهرة",
+    "صعدة",
+    "البيضاء"
+  ],
+  "halls": [
+    {
+      "id": "h1",
+      "number": 1,
+      "name": "قاعة سبأ",
+      "floor": 1,
+      "civilization": "saba",
+      "size": 240,
+      "artifacts": 18
+    },
+    {
+      "id": "h2",
+      "number": 2,
+      "name": "قاعة معين",
+      "floor": 1,
+      "civilization": "main",
+      "size": 180,
+      "artifacts": 14
+    },
+    {
+      "id": "h3",
+      "number": 3,
+      "name": "قاعة قتبان",
+      "floor": 1,
+      "civilization": "qataban",
+      "size": 160,
+      "artifacts": 12
+    },
+    {
+      "id": "h4",
+      "number": 4,
+      "name": "قاعة أوسان",
+      "floor": 1,
+      "civilization": "awsan",
+      "size": 140,
+      "artifacts": 10
+    },
+    {
+      "id": "h5",
+      "number": 5,
+      "name": "قاعة حضرموت",
+      "floor": 1,
+      "civilization": "hadramout",
+      "size": 200,
+      "artifacts": 16
+    },
+    {
+      "id": "h6",
+      "number": 6,
+      "name": "قاعة حمير",
+      "floor": 1,
+      "civilization": "himyar",
+      "size": 190,
+      "artifacts": 15
+    },
+    {
+      "id": "h7",
+      "number": 7,
+      "name": "قاعة المخطوطات",
+      "floor": 2,
+      "civilization": "islamic",
+      "size": 220,
+      "artifacts": 20
+    },
+    {
+      "id": "h8",
+      "number": 8,
+      "name": "قاعة العملات الإسلامية",
+      "floor": 2,
+      "civilization": "islamic",
+      "size": 150,
+      "artifacts": 18
+    },
+    {
+      "id": "h9",
+      "number": 9,
+      "name": "قاعة المصاحف",
+      "floor": 2,
+      "civilization": "islamic",
+      "size": 170,
+      "artifacts": 12
+    },
+    {
+      "id": "h10",
+      "number": 10,
+      "name": "قاعة الأسلحة",
+      "floor": 2,
+      "civilization": "islamic",
+      "size": 160,
+      "artifacts": 14
+    },
+    {
+      "id": "h11",
+      "number": 11,
+      "name": "قاعة الفخاريات الإسلامية",
+      "floor": 2,
+      "civilization": "islamic",
+      "size": 180,
+      "artifacts": 16
+    },
+    {
+      "id": "h12",
+      "number": 12,
+      "name": "قاعة الأزياء التقليدية",
+      "floor": 3,
+      "civilization": "modern",
+      "size": 210,
+      "artifacts": 16
+    },
+    {
+      "id": "h13",
+      "number": 13,
+      "name": "قاعة التراث اليمني",
+      "floor": 3,
+      "civilization": "modern",
+      "size": 200,
+      "artifacts": 15
+    },
+    {
+      "id": "h14",
+      "number": 14,
+      "name": "قاعة الوثائق التاريخية",
+      "floor": 3,
+      "civilization": "modern",
+      "size": 150,
+      "artifacts": 12
+    },
+    {
+      "id": "h15",
+      "number": 15,
+      "name": "قاعة الفن الحديث",
+      "floor": 3,
+      "civilization": "modern",
+      "size": 190,
+      "artifacts": 14
+    }
+  ],
+  "events": [
+    {
+      "id": "ev1",
+      "year": "1200 ق.م",
+      "title": "قيام مملكة سبأ",
+      "description": "نشأت مملكة سبأ في مأرب، واشتهرت بسد مأرب العظيم وطريق البخور.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "ev2",
+      "year": "800 ق.م",
+      "title": "ازدهار مملكة معين",
+      "description": "قامت مملكة معين في الجوف، واشتهرت بالتجارة البرية وطريق البخور.",
+      "image": "assets/images/photos/photo-19.webp",
+      "thumbnail": "assets/images/photos/thumb-19.webp"
+    },
+    {
+      "id": "ev3",
+      "year": "750 ق.م",
+      "title": "بناء سد مأرب القديم",
+      "description": "بدأ بناء سد مأرب لري الأراضي الزراعية وتخزين المياه.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "ev4",
+      "year": "600 ق.م",
+      "title": "قيام مملكة قتبان",
+      "description": "قامت مملكة قتبان في تمنع، وامتد نفوذها في البيضاء وشبوة.",
+      "image": "assets/images/photos/photo-04.webp",
+      "thumbnail": "assets/images/photos/thumb-04.webp"
+    },
+    {
+      "id": "ev5",
+      "year": "500 ق.م",
+      "title": "مملكة أوسان",
+      "description": "ازدهرت مملكة أوسان في وادي مرخة ثم خضعت لسبأ.",
+      "image": "assets/images/photos/photo-09.webp",
+      "thumbnail": "assets/images/photos/thumb-09.webp"
+    },
+    {
+      "id": "ev6",
+      "year": "450 ق.م",
+      "title": "ازدهار حضرموت",
+      "description": "اشتهرت حضرموت بلبانها ومملكة سبأ كانت شريكتها التجارية.",
+      "image": "assets/images/photos/photo-13.webp",
+      "thumbnail": "assets/images/photos/thumb-13.webp"
+    },
+    {
+      "id": "ev7",
+      "year": "115 ق.م",
+      "title": "صعود مملكة حمير",
+      "description": "برزت مملكة حمير في ظفار يريم وذمار، وتوحيد اليمن تحت قيادتها.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "ev8",
+      "year": "25 ق.م",
+      "title": "الحملة الرومانية",
+      "description": "حاول الرومان احتلال اليمن بقيادة أيليوس غالوس وفشلوا.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "ev9",
+      "year": "525 م",
+      "title": "نهاية مملكة حمير",
+      "description": "انتهت مملكة حمير بعد التدخل الأكسومي في اليمن.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "ev10",
+      "year": "628 م",
+      "title": "دخول الإسلام إلى اليمن",
+      "description": "اعتنق اليمنيون الإسلام في عهد النبي محمد ﷺ.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "ev11",
+      "year": "705 م",
+      "title": "بناء الجامع الكبير بصنعاء",
+      "description": "بُني الجامع الكبير في صنعاء على أنقاض كنيسة قديمة.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "ev12",
+      "year": "897 م",
+      "title": "قيام الدولة الزيدية",
+      "description": "أسس الإمام الهادي يحيى بن الحسين الدولة الزيدية في صعدة.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "ev13",
+      "year": "1064 م",
+      "title": "قيام دولة بني نجاح",
+      "description": "قامت دولة بني نجاح في زبيد، واشتهرت بالعلم والعلماء.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "ev14",
+      "year": "1229 م",
+      "title": "الدولة الرسولية",
+      "description": "ازدهرت الدولة الرسولية في تعز وزبيد، ورعت العلم والعمارة.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "ev15",
+      "year": "1517 م",
+      "title": "الدخول العثماني الأول",
+      "description": "دخل العثمانيون اليمن لأول مرة في القرن السادس عشر.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "ev16",
+      "year": "1918 م",
+      "title": "استقلال المملكة المتوكلية",
+      "description": "حصلت المملكة المتوكلية اليمنية على استقلالها عن العثمانيين.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "ev17",
+      "year": "1962 م",
+      "title": "ثورة 26 سبتمبر",
+      "description": "قيام الجمهورية العربية اليمنية وانهيار النظام الإمامي.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "ev18",
+      "year": "1967 م",
+      "title": "استقلال جنوب اليمن",
+      "description": "جلاء الاحتلال البريطاني عن عدن وإعلان جمهورية اليمن الجنوبية.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "ev19",
+      "year": "1971 م",
+      "title": "تأسيس المتحف الوطني",
+      "description": "تأسس المتحف الوطني اليمني في صنعاء لعرض التراث اليمني.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "ev20",
+      "year": "1990 م",
+      "title": "الوحدة اليمنية",
+      "description": "تحقيق الوحدة بين شطري اليمن وقيام الجمهورية اليمنية.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    }
+  ],
+  "figures": [
+    {
+      "id": "f1",
+      "name": "بلقيس ملكة سبأ",
+      "role": "ملكة",
+      "civilization": "سبأ",
+      "period": "القرن 10 ق.م",
+      "description": "ملكة سبأ الشهيرة المذكورة في القرآن الكريم.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "f2",
+      "name": "كرب إيل وتر",
+      "role": "مكرب",
+      "civilization": "سبأ",
+      "period": "القرن 8 ق.م",
+      "description": "من أقدم ملوك سبأ، ورد اسمه في النقوش السبئية.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "f3",
+      "name": "كرب إيل بين",
+      "role": "ملك",
+      "civilization": "سبأ",
+      "period": "القرن 7 ق.م",
+      "description": "ملك سبأ الذي ذكرته النصوص الآشورية.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "f4",
+      "name": "شهر هم يهقبض",
+      "role": "ملك",
+      "civilization": "سبأ",
+      "period": "القرن 6 ق.م",
+      "description": "من ملوك سبأ البارزين في فترة ما بعد سد مأرب.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "f5",
+      "name": "إلي شرح يحضب",
+      "role": "ملك",
+      "civilization": "سبأ",
+      "period": "القرن 2 ق.م",
+      "description": "ملك سبأ الذي وحد القبائل ضد الحكم الحميري.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "f6",
+      "name": "يدع إيل بين",
+      "role": "ملك",
+      "civilization": "حضرموت",
+      "period": "القرن 4 ق.م",
+      "description": "ملك حضرموت، عُرفت دولته بالازدهار التجاري.",
+      "image": "assets/images/photos/photo-13.webp",
+      "thumbnail": "assets/images/photos/thumb-13.webp"
+    },
+    {
+      "id": "f7",
+      "name": "الشرح يحضب الثاني",
+      "role": "ملك",
+      "civilization": "سبأ",
+      "period": "القرن 2 م",
+      "description": "ملك سبأ الشهير في نقوش معبد أوام.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "f8",
+      "name": "شمر يهرعش",
+      "role": "ملك",
+      "civilization": "حمير",
+      "period": "القرن 3 م",
+      "description": "ملك حمير الذي وحد اليمن تحت الحكم الحميري.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "f9",
+      "name": "ملكيكرب يهامن",
+      "role": "ملك",
+      "civilization": "حمير",
+      "period": "القرن 4 م",
+      "description": "أول ملك يهودي في مملكة حمير.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "f10",
+      "name": "أبو كرب أسعد",
+      "role": "ملك",
+      "civilization": "حمير",
+      "period": "القرن 5 م",
+      "description": "أشهر ملوك التبابعة، ووحد معظم جزيرة العرب.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "f11",
+      "name": "ذو نواس",
+      "role": "ملك",
+      "civilization": "حمير",
+      "period": "القرن 6 م",
+      "description": "آخر ملوك حمير، ورد ذكره في أحداث أصحاب الأخدود.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "f12",
+      "name": "أبرهة الأشرم",
+      "role": "حاكم",
+      "civilization": "الأحباش",
+      "period": "القرن 6 م",
+      "description": "الحاكم الحبشي لليمن، صاحب قصة الفيل المذكورة في القرآن.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f13",
+      "name": "وهب بن منبه",
+      "role": "عالم ومؤرخ",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 8 م",
+      "description": "مؤرخ وعالم يمني من ذمار، من أقدم من كتب التاريخ.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f14",
+      "name": "طاووس بن كيسان",
+      "role": "عالم",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 8 م",
+      "description": "عالم جليل من كبار التابعين في اليمن.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f15",
+      "name": "الإمام الهادي يحيى",
+      "role": "إمام",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 9 م",
+      "description": "مؤسس الدولة الزيدية في اليمن.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f16",
+      "name": "الهمداني أبو محمد",
+      "role": "عالم وجغرافي",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 10 م",
+      "description": "صاحب موسوعة الإكليل وجزيرة العرب.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f17",
+      "name": "علي بن الحسن الخزرجي",
+      "role": "مؤرخ",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 14 م",
+      "description": "مؤرخ الدولة الرسولية.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f18",
+      "name": "إسماعيل بن علي الأكوع",
+      "role": "مؤرخ",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 20 م",
+      "description": "مؤرخ يمني معاصر، كتب في تاريخ اليمن.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f19",
+      "name": "القاضي محمد العمراني",
+      "role": "فقيه",
+      "civilization": "العصر الإسلامي",
+      "period": "القرن 20 م",
+      "description": "من أبرز علماء اليمن في العصر الحديث.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "f20",
+      "name": "عبد الرحمن الإرياني",
+      "role": "رئيس",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "رئيس الجمهورية العربية اليمنية وأديب معروف.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f21",
+      "name": "قحطان الشعبي",
+      "role": "رئيس",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "أول رئيس لجمهورية اليمن الجنوبية.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f22",
+      "name": "سلطان العتواني",
+      "role": "باحث",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "باحث في التراث والآثار اليمنية.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f23",
+      "name": "يوسف عبد الله",
+      "role": "مؤرخ",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "باحث يمني في النقوش والآثار.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f24",
+      "name": "عبد الله الحبشي",
+      "role": "مؤرخ",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "محقق ومؤرخ يمني شهير.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f25",
+      "name": "أحمد أبو بكر بن فريد",
+      "role": "شاعر",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "شاعر حضرمي مشهور.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f26",
+      "name": "عبد العزيز المقالح",
+      "role": "شاعر",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "أديب وشاعر وأستاذ جامعي يمني.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f27",
+      "name": "مطلق مطهر",
+      "role": "فنان",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "فنان تشكيلي يمني من رواد الفن الحديث.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f28",
+      "name": "علي المقدشي",
+      "role": "عسكري",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "قائد عسكري يمني.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f29",
+      "name": "سميرة حاج",
+      "role": "ناشطة",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 21 م",
+      "description": "ناشطة سياسية يمنية.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "f30",
+      "name": "أمين الحضرمي",
+      "role": "باحث",
+      "civilization": "اليمن الحديث",
+      "period": "القرن 20 م",
+      "description": "باحث في التراث اليمني.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    }
+  ],
+  "news": [
+    {
+      "id": "n1",
+      "date": "2024-12-10",
+      "title": "افتتاح قاعة حمير الجديدة",
+      "excerpt": "افتتاح قاعة حمير بعد أعمال الترميم والتجهيز لعرض مقتنيات مملكة حمير.",
+      "image": "assets/images/photos/photo-17.webp",
+      "thumbnail": "assets/images/photos/thumb-17.webp"
+    },
+    {
+      "id": "n2",
+      "date": "2024-11-02",
+      "title": "معرض النقوش اليمنية",
+      "excerpt": "معرض مؤقت للنقوش السبئية والحميرية بالتعاون مع البعثات الأثرية.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "n3",
+      "date": "2024-09-18",
+      "title": "برنامج التثقيف المدرسي",
+      "excerpt": "إطلاق برنامج الزيارات المدرسية المجانية لطلاب المدارس في أمانة العاصمة.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    },
+    {
+      "id": "n4",
+      "date": "2024-07-25",
+      "title": "ترميم مخطوطات نادرة",
+      "excerpt": "فريق الترميم ينجز ترميم 40 مخطوطة نادرة من العصر الإسلامي.",
+      "image": "assets/images/photos/photo-24.webp",
+      "thumbnail": "assets/images/photos/thumb-24.webp"
+    },
+    {
+      "id": "n5",
+      "date": "2024-05-08",
+      "title": "يوم المتاحف العالمي",
+      "excerpt": "احتفال المتحف باليوم العالمي للمتاحف مع فعاليات وأنشطة للزوار.",
+      "image": "assets/images/photos/photo-01.webp",
+      "thumbnail": "assets/images/photos/thumb-01.webp"
+    },
+    {
+      "id": "n6",
+      "date": "2024-03-15",
+      "title": "إطلاق الدليل الرقمي",
+      "excerpt": "إطلاق النسخة الجديدة من الدليل الرقمي للمتحف الوطني اليمني.",
+      "image": "assets/images/photos/photo-26.webp",
+      "thumbnail": "assets/images/photos/thumb-26.webp"
+    }
+  ],
+  "map": {
+    "lat": 15.3527,
+    "lng": 44.2046,
+    "zoom": 16,
+    "features": {
+      "entrance": {
+        "lat": 15.3527,
+        "lng": 44.2046,
+        "label": "المدخل الرئيسي"
+      },
+      "elevator": {
+        "lat": 15.3529,
+        "lng": 44.2044,
+        "label": "المصعد"
+      },
+      "restrooms": {
+        "lat": 15.3528,
+        "lng": 44.2049,
+        "label": "دورات المياه"
+      },
+      "cafe": {
+        "lat": 15.3525,
+        "lng": 44.2043,
+        "label": "المقهى"
+      },
+      "giftshop": {
+        "lat": 15.3526,
+        "lng": 44.2048,
+        "label": "متجر الهدايا"
+      },
+      "exit": {
+        "lat": 15.3526,
+        "lng": 44.2047,
+        "label": "مخرج الطوارئ"
+      }
+    }
+  },
+  "provinceImages": {
+    "صنعاء": "assets/images/photos/photo-26.webp",
+    "عدن": "assets/images/photos/photo-26.webp",
+    "تعز": "assets/images/photos/photo-26.webp",
+    "الحديدة": "assets/images/photos/photo-24.webp",
+    "إب": "assets/images/photos/photo-26.webp",
+    "ذمار": "assets/images/photos/photo-17.webp",
+    "مأرب": "assets/images/photos/photo-01.webp",
+    "الجوف": "assets/images/photos/photo-19.webp",
+    "حضرموت": "assets/images/photos/photo-13.webp",
+    "شبوة": "assets/images/photos/photo-13.webp",
+    "أبين": "assets/images/photos/photo-09.webp",
+    "لحج": "assets/images/photos/photo-09.webp",
+    "المهرة": "assets/images/photos/photo-13.webp",
+    "صعدة": "assets/images/photos/photo-24.webp",
+    "البيضاء": "assets/images/photos/photo-04.webp"
+  },
+  "home": {
+    "heroImage": "assets/images/photos/photo-01.webp",
+    "heroThumbnail": "assets/images/photos/thumb-01.webp",
+    "featuredGallery": [
+      "assets/images/photos/photo-01.webp",
+      "assets/images/photos/photo-24.webp",
+      "assets/images/photos/photo-26.webp",
+      "assets/images/photos/photo-13.webp"
+    ],
+    "latestExhibits": [
+      {
+        "id": 1,
+        "image": "assets/images/photos/photo-01.webp"
+      },
+      {
+        "id": 2,
+        "image": "assets/images/photos/photo-02.webp"
+      },
+      {
+        "id": 3,
+        "image": "assets/images/photos/photo-03.webp"
+      },
+      {
+        "id": 4,
+        "image": "assets/images/photos/photo-04.webp"
+      },
+      {
+        "id": 5,
+        "image": "assets/images/photos/photo-05.webp"
+      },
+      {
+        "id": 6,
+        "image": "assets/images/photos/photo-06.webp"
+      }
+    ],
+    "civilizationBanners": [
+      {
+        "id": "saba",
+        "image": "assets/images/photos/photo-01.webp"
+      },
+      {
+        "id": "main",
+        "image": "assets/images/photos/photo-19.webp"
+      },
+      {
+        "id": "qataban",
+        "image": "assets/images/photos/photo-04.webp"
+      },
+      {
+        "id": "awsan",
+        "image": "assets/images/photos/photo-09.webp"
+      },
+      {
+        "id": "hadramout",
+        "image": "assets/images/photos/photo-13.webp"
+      },
+      {
+        "id": "himyar",
+        "image": "assets/images/photos/photo-17.webp"
+      },
+      {
+        "id": "islamic",
+        "image": "assets/images/photos/photo-24.webp"
+      },
+      {
+        "id": "modern",
+        "image": "assets/images/photos/photo-26.webp"
+      }
+    ]
+  }
+}

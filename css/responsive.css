@@ -1,0 +1,99 @@
+/* ============================================================
+   YEMEN NATIONAL MUSEUM GUIDE — responsive.css
+   Responsive layout for tablets & mobile
+   Engineer: Eng. Ammar Adel Al-Masouei
+   ============================================================ */
+
+/* ---------- Large desktop (1400px+) ---------- */
+@media (min-width: 1400px) {
+  .hero-inner { max-width: 900px; }
+}
+
+/* ---------- Desktop / small laptop ---------- */
+@media (max-width: 1199.98px) {
+  .detail-hero { grid-template-columns: 1fr; }
+  .detail-media { position: static; }
+  .floor-strip { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 991.98px) {
+  .floor-strip { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .nav-menu {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(84vw, 330px);
+    flex-direction: column;
+    align-items: stretch;
+    background: #fff;
+    padding: 2rem 1.4rem;
+    gap: .4rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(110%);
+    transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+    z-index: 1300;
+    overflow-y: auto;
+  }
+  html[dir="rtl"] .nav-menu { inset: 0 0 0 auto; transform: translateX(-110%); }
+  .nav-menu.open { transform: translateX(0) !important; }
+  .nav-toggle { display: grid; }
+  .nav-cta { flex-wrap: wrap; }
+}
+
+/* ---------- Tablet portrait ---------- */
+@media (max-width: 767.98px) {
+  body { font-size: 15px; }
+  .hero { min-height: auto; padding: 3.5rem 0; }
+  .hero-inner { padding-block: 1rem; }
+  .hero-search { grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+  .floor-strip { grid-template-columns: 1fr; margin-top: -1.6rem; }
+  .detail-specs { grid-template-columns: 1fr; }
+  .profile-head { flex-direction: column; align-items: flex-start; }
+  .event-card { flex-direction: column; }
+  .event-card .year-badge { width: 86px; }
+  .stat-box { padding: 1.2rem .8rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .page-hero { padding: 2.6rem 0 2.2rem; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 575.98px) {
+  .brand-sub { display: none; }
+  .cards-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+  .cards-grid.tight { grid-template-columns: 1fr; }
+  .filter-grid { grid-template-columns: 1fr; }
+  .detail-gallery { grid-template-columns: repeat(3, 1fr); }
+  .detail-gallery img { height: 64px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .auth-card { padding: 1.5rem; }
+  .museum-map { height: 420px; }
+  .map-sidebar { max-height: 320px; }
+  .timeline { padding-inline-start: 1.4rem; }
+  .tl-item::before { right: -1.4rem; }
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.4rem; }
+  .swiper-button-next,
+  .swiper-button-prev { display: none !important; }
+}
+
+/* ---------- Small mobile ---------- */
+@media (max-width: 380px) {
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .floor-chip { flex-direction: column; text-align: center; }
+  .brand-name { font-size: 1.05rem; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
