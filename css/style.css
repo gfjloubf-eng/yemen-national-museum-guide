@@ -1455,6 +1455,50 @@ main {
   .home-gallery { grid-template-columns: 1fr; }
 }
 
+/* ---------- Milestone 10: global responsive safety (additive) ---------- */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+body {
+  overflow-x: hidden;
+}
+#main {
+  width: 100%;
+  min-width: 0;
+}
+/* Allow flex/grid children to shrink instead of forcing overflow */
+.d-flex > *,
+.row > *,
+.cards-grid > *,
+.filter-grid > *,
+.detail-hero > *,
+.floor-strip > *,
+.related-strip > *,
+.charts-grid > * {
+  min-width: 0;
+}
+/* Text never overflows on narrow screens */
+p,
+h1, h2, h3, h4, h5,
+.btn,
+.badge-lux,
+.nav-link,
+.brand-name,
+.footer-link,
+.section-title,
+.tl-item,
+.spec-item .v,
+.floor-chip p,
+.civ-card .civ-body p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+img {
+  max-width: 100%;
+}
+
 /* ---------- Milestone 9: contact page ---------- */
 .contact-link {
   color: var(--primary);

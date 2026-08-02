@@ -298,5 +298,13 @@
   .dash-stats { grid-template-columns: 1fr 1fr; gap: .8rem; }
   .dash-stat { padding: 1rem; flex-direction: column; text-align: center; }
   .charts-grid { grid-template-columns: 1fr; }
+  .dash-panel .panel-head { flex-direction: column; align-items: flex-start; }
+  .row-actions { flex-wrap: wrap; }
+  .dash-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+@media (max-width: 359.98px) {
+  .dash-stats { grid-template-columns: 1fr; }
+  .dash-main { padding: .9rem; }
 }
 
