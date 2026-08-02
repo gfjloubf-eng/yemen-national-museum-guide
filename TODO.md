@@ -1,21 +1,22 @@
-# Milestone 8 — Frontend Image Binding — TODO
+# Milestone 9 — Backend Foundation (Node.js + Express + SQLite) — TODO
 
 ## Steps
 
-- [x] 1. index.html — Replace hero SVG with dynamic `#heroImage`; add gallery preview container `#homeGallery`
-- [x] 2. js/home.js — Add `renderHeroImage()`, civ banner binding, news image binding (remove `news-*.svg`), remove placeholder fallbacks, add `renderHomeGallery()`
-- [x] 3. js/app.js — `exhibitCard` use `ex.thumbnail || ex.image`; remove placeholder fallback
-- [x] 4. js/civilizations.js — Remove placeholder fallback; add banner to civ modal
-- [x] 5. js/halls.js — Add cover image to hall cards
-- [x] 6. js/floors.js — Add floor background image
-- [x] 7. js/detail.js — Display caption; dedupe gallery
-- [x] 8. js/timeline.js — Add event thumbnails; add `renderFigures()`
-- [x] 9. timeline.html — Add Historical Figures section container
-- [x] 10. js/admin.js — Remove placeholder fallback in table
-- [x] 11. css/style.css — Additive CSS for new image elements
-- [x] 12. Validation — Scan for remaining placeholder/SVG refs; verify all image paths exist on disk
+- [x] M8. Frontend Image Binding complete
+- [x] 1. Backend scaffold — `backend/package.json`, `app.js`, folder structure (routes/controllers/services/models/middleware/database/uploads)
+- [x] 2. Database schema — `backend/database/schema.sql` (civilizations, exhibits, halls, floors, events, figures, categories, provinces, users, museum_meta, contact_messages)
+- [x] 3. Auto-import all JSON datasets into SQLite — `backend/database/init.js` (museum.json, civilizations.json, exhibits.json, halls.json, users.json)
+- [x] 4. Models layer — `backend/models/index.js` (prepared statements + JSON column parsing)
+- [x] 5. Service layer — `backend/services/museumService.js` (home aggregate, search, contact)
+- [x] 6. Controllers — `backend/controllers/museumController.js` (async/await handlers + validation)
+- [x] 7. Routes — `backend/routes/index.js` (REST API endpoints + POST /login + POST /contact)
+- [x] 8. Middleware — `backend/middleware/errorHandler.js` (404 + central error handler)
+- [x] 9. Frontend — `js/app.js` API-first data loading with local JSON fallback; add Contact link in nav/footer; update footer phone + WhatsApp
+- [x] 10. Contact page — `contact.html` + `js/contact.js` (Full Name, Email, Subject, Message; phone +967712750388; WhatsApp wa.me/967712750388; stores to contact_messages)
+- [x] 11. Docs — update README.md; write `reports/milestone9_backend_report.md`
+- [x] 12. Validation — `npm install`, `npm run dev`, verify DB created, JSON imported, API working, frontend connected, images/search/filters/timeline/gallery work, contact stores messages, zero console/server errors
 
 ## Status
 
-- [x] Milestone 8 complete — validation passed with zero broken image references in the live app sources.
+- Milestone 9 complete — backend foundation with Express + SQLite, REST API, and Contact page.
 

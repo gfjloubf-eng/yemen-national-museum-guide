@@ -20,13 +20,44 @@
     const loginError = document.getElementById("loginError");
 
     if (loginBtn) {
-      loginBtn.addEventListener("click", () => {
+      loginBtn.addEventListener("click", async () => {
         const u = loginUser.value.trim();
         const p = loginPass.value;
         if (!u || !p) {
           loginError.textContent = "يرجى إدخال اسم المستخدم وكلمة المرور";
           return;
         }
+
+        // API mode: verify credentials on the server (no passwords shipped to browser)
+        if (window.YNM.state && window.YNM.state.source === "api") {
+          try {
+            const res = await fetch(window.YNM.API_BASE + "/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ username: u, password: p })
+            });
+            const data = await res.json();
+            if (!res.ok || !data.user) {
+              loginError.textContent = "اسم المستخدم أو كلمة المرور غير صحيحة";
+              return;
+            }
+            // Store the safe user object (no password) in localStorage
+            const safe = Object.assign({}, data.user);
+            delete safe.password;
+            window.YNM.state.currentUser = safe;
+            localStorage.setItem("ynm_user", JSON.stringify(safe));
+            loginError.textContent = "";
+            setTimeout(() => {
+              window.location.href = safe.role === "admin" ? "admin.html" : "profile.html";
+            }, 500);
+            return;
+          } catch (err) {
+            loginError.textContent = "تعذر الاتصال بالخادم، جرّب مرة أخرى";
+            return;
+          }
+        }
+
+        // Local JSON fallback mode
         const user = window.YNM.login(u, p);
         if (user) {
           loginError.textContent = "";

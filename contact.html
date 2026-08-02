@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا — المتحف الوطني اليمني</title>
+  <meta name="description" content="تواصل مع المتحف الوطني اليمني بصنعاء: الهاتف، الواتساب، أو عبر نموذج الاتصال.">
+  <meta name="author" content="Eng. Ammar Adel Al-Masouei">
+  <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="bg-pattern"></div>
+      <div class="container-main">
+        <h1><i class="fa-solid fa-headset"></i> اتصل بنا</h1>
+        <p>يسعدنا تواصلك مع المتحف الوطني اليمني — استفسارات، ملاحظات، أو تعاون.</p>
+        <nav class="breadcrumb-nav" aria-label="مسار التنقل">
+          <a href="index.html">الرئيسية</a>
+          <span>/</span>
+          <span>اتصل بنا</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="container-main py-4">
+      <div class="row g-4">
+        <!-- Contact info -->
+        <div class="col-lg-5">
+          <div class="glass-card hoverable">
+            <h3><i class="fa-solid fa-circle-info gold-text"></i> معلومات التواصل</h3>
+            <ul class="list-unstyled mt-3" style="line-height:2.4">
+              <li><i class="fa-solid fa-location-dot bronze-text me-2"></i> شارع الخمسين، صنعاء - الجمهورية اليمنية</li>
+              <li>
+                <i class="fa-solid fa-phone bronze-text me-2"></i>
+                <a href="tel:+967712750388" class="contact-link">+967712750388</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp bronze-text me-2"></i>
+                <a href="https://wa.me/967712750388" target="_blank" rel="noopener" class="contact-link">واتساب: +967712750388</a>
+              </li>
+              <li><i class="fa-solid fa-clock bronze-text me-2"></i> السبت - الخميس، 9 صباحاً - 5 مساءً</li>
+              <li><i class="fa-solid fa-door-open bronze-text me-2"></i> الجمعة: مغلق</li>
+            </ul>
+          </div>
+
+          <div class="glass-card mt-3">
+            <h3><i class="fa-solid fa-map gold-text"></i> الموقع</h3>
+            <p class="muted-text">المتحف الوطني اليمني قرب ميدان التحرير في وسط العاصمة صنعاء.</p>
+            <a class="btn btn-bronze btn-sm" href="map.html"><i class="fa-solid fa-map-location-dot"></i> افتح الخريطة التفاعلية</a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="col-lg-7">
+          <div class="glass-card">
+            <h3><i class="fa-solid fa-paper-plane gold-text"></i> أرسل رسالة</h3>
+            <p class="muted-text">املأ النموذج وسيتم حفظ رسالتك والرد عليك في أقرب وقت.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-field">
+                    <label for="contactName">الاسم الكامل *</label>
+                    <input id="contactName" type="text" placeholder="اسمك الكامل" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-field">
+                    <label for="contactEmail">البريد الإلكتروني *</label>
+                    <input id="contactEmail" type="email" placeholder="you@example.com" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <label for="contactSubject">الموضوع *</label>
+                    <input id="contactSubject" type="text" placeholder="موضوع الرسالة" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <label for="contactMessage">الرسالة *</label>
+                    <textarea id="contactMessage" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-gold btn-block" id="contactSubmit" type="submit">
+                    <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة
+                  </button>
+                  <p class="muted-text mt-2 small" id="contactError"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
+

@@ -17,6 +17,10 @@
 
   const PROVINCES = ["صنعاء", "عدن", "تعز", "الحديدة", "إب", "ذمار", "مأرب", "الجوف", "حضرموت", "شبوة", "أبين", "لحج", "المهرة", "صعدة", "البيضاء"];
 
+  const API_BASE = "http://localhost:3000/api";
+  const CONTACT_PHONE = "+967712750388";
+  const CONTACT_WHATSAPP = "https://wa.me/967712750388";
+
   /* ---------- State ---------- */
   const state = {
     data: null,        // central museum.json
@@ -79,25 +83,61 @@
   }
 
   /* ---------- Data loader ---------- */
-  async function initData() {
-    try {
-      const [museum, civs, exhs, hls, usrs] = await Promise.all([
-        loadJSON("data/museum.json"),
-        loadJSON("data/civilizations.json"),
-        loadJSON("data/exhibits.json"),
-        loadJSON("data/halls.json"),
-        loadJSON("data/users.json")
-      ]);
-      state.data = museum;
-      state.civilizations = civs.civilizations || [];
-      state.exhibits = exhs.exhibits || [];
-      state.halls = hls.halls || [];
-      state.users = usrs.users || [];
-      return state;
-    } catch (err) {
-      console.error("Failed to load data:", err);
-      return state;
+  async function loadFromAPI() {
+    const base = API_BASE;
+    const [homeRes, civsRes, exhsRes, hlsRes, usrsRes] = await Promise.all([
+      fetch(base + "/home").then((r) => (r.ok ? r.json() : null)),
+      fetch(base + "/civilizations").then((r) => (r.ok ? r.json() : null)),
+      fetch(base + "/exhibits").then((r) => (r.ok ? r.json() : null)),
+      fetch(base + "/halls").then((r) => (r.ok ? r.json() : null)),
+      fetch(base + "/users").then((r) => (r.ok ? r.json() : null))
+    ]);
+
+    if (!homeRes || !civsRes || !exhsRes || !hlsRes || !usrsRes) {
+      throw new Error("Incomplete API response");
     }
+
+    // Compose the same shape as the local JSON dataset.
+    const museum = Object.assign({}, homeRes);
+    state.data = museum;
+    state.civilizations = civsRes.civilizations || [];
+    state.exhibits = exhsRes.exhibits || [];
+    state.halls = hlsRes.halls || [];
+    state.users = usrsRes.users || [];
+    return state;
+  }
+
+  async function loadFromFiles() {
+    const [museum, civs, exhs, hls, usrs] = await Promise.all([
+      loadJSON("data/museum.json"),
+      loadJSON("data/civilizations.json"),
+      loadJSON("data/exhibits.json"),
+      loadJSON("data/halls.json"),
+      loadJSON("data/users.json")
+    ]);
+    state.data = museum;
+    state.civilizations = civs.civilizations || [];
+    state.exhibits = exhs.exhibits || [];
+    state.halls = hls.halls || [];
+    state.users = usrs.users || [];
+    return state;
+  }
+
+  async function initData() {
+    // API-first (Milestone 9) with graceful fallback to local JSON (SAFE mode).
+    try {
+      await loadFromAPI();
+      state.source = "api";
+    } catch (err) {
+      console.warn("[app] API unavailable, falling back to local JSON:", err.message || err);
+      try {
+        await loadFromFiles();
+        state.source = "json";
+      } catch (err2) {
+        console.error("Failed to load data:", err2);
+      }
+    }
+    return state;
   }
 
   /* ---------- Favorites ---------- */
@@ -284,6 +324,7 @@
           '<a class="nav-link ' + active("timeline.html") + '" href="' + root + 'timeline.html">الخط الزمني</a>' +
           '<a class="nav-link ' + active("map.html") + '" href="' + root + 'map.html">الخريطة</a>' +
           '<a class="nav-link ' + active("search.html") + '" href="' + root + 'search.html">البحث</a>' +
+          '<a class="nav-link ' + active("contact.html") + '" href="' + root + 'contact.html">اتصل بنا</a>' +
         '</nav>' +
         '<div class="nav-cta">' +
           '<a class="btn btn-ghost btn-sm" href="' + root + 'favorites.html" title="المفضلة">' +
@@ -323,12 +364,14 @@
             '<a class="footer-link" href="' + root + 'map.html">الخريطة والوصول</a>' +
             '<a class="footer-link" href="' + root + 'favorites.html">المفضلة</a>' +
             '<a class="footer-link" href="' + root + 'login.html">تسجيل الدخول</a>' +
+            '<a class="footer-link" href="' + root + 'contact.html">اتصل بنا</a>' +
             '<a class="footer-link" href="' + root + 'admin.html">لوحة الإدارة</a>' +
           '</div>' +
           '<div class="col-lg-4 col-md-6">' +
             '<h5>تواصل معنا</h5>' +
             '<p class="small" style="color:rgba(255,255,255,.72)"><i class="fa-solid fa-location-dot me-2"></i>شارع الخمسين، صنعاء - الجمهورية اليمنية</p>' +
-            '<p class="small" style="color:rgba(255,255,255,.72)"><i class="fa-solid fa-phone me-2"></i>+967-1-200-000</p>' +
+            '<p class="small" style="color:rgba(255,255,255,.72)"><i class="fa-solid fa-phone me-2"></i>+967712750388</p>' +
+            '<p class="small" style="color:rgba(255,255,255,.72)"><a class="footer-link" style="color:rgba(255,255,255,.72)" href="https://wa.me/967712750388" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>واتساب: +967712750388</a></p>' +
             '<div class="social-row mt-3">' +
               '<a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>' +
               '<a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>' +
@@ -471,7 +514,10 @@
       esc,
       $,
       $$,
-      PROVINCES
+      PROVINCES,
+      API_BASE,
+      CONTACT_PHONE,
+      CONTACT_WHATSAPP
     };
     document.dispatchEvent(new CustomEvent("ynm:ready", { detail: state }));
   }

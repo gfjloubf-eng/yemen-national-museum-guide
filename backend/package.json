@@ -1,0 +1,27 @@
+{
+  "name": "yemen-museum-backend",
+  "version": "1.0.0",
+  "description": "Node.js + Express + SQLite backend for the Yemen National Museum Guide",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "init-db": "node database/init.js"
+  },
+  "keywords": [
+    "museum",
+    "yemen",
+    "express",
+    "sqlite",
+    "rest-api"
+  ],
+  "author": "Eng. Ammar Adel Al-Masouei",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
+
