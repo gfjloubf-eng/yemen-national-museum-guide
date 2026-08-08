@@ -315,8 +315,12 @@
         '<a class="brand" href="' + root + 'index.html">' +
           '<span class="brand-logo"><i class="fa-solid fa-landmark-dome"></i></span>' +
           '<span><span class="brand-name">المتحف الوطني اليمني</span><br><span class="brand-sub">دليل المتحف الرقمي</span></span>' +
-        '</a>' +
+'</a>' +
         '<nav class="nav-menu" id="navMenu" aria-label="القائمة الرئيسية">' +
+          '<div class="nav-head">' +
+            '<span class="nav-title">القائمة</span>' +
+            '<button type="button" class="nav-close" id="navClose" aria-label="إغلاق القائمة"><i class="fa-solid fa-xmark"></i></button>' +
+          '</div>' +
           '<a class="nav-link ' + active("index.html") + '" href="' + root + 'index.html">الرئيسية</a>' +
           '<a class="nav-link ' + active("civilizations.html") + '" href="' + root + 'civilizations.html">الحضارات</a>' +
           '<a class="nav-link ' + active("exhibits.html") + '" href="' + root + 'exhibits.html">المعروضات</a>' +
@@ -389,23 +393,55 @@
     );
   }
 
+function setNavBodyLock(lock) {
+    document.body.classList.toggle("nav-open", lock);
+    if (lock) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
+
   function bindNavEvents() {
     const toggle = $("#navToggle");
     const menu = $("#navMenu");
     const overlay = $("#navOverlay");
+    const closeBtn = $("#navClose");
     if (toggle && menu) {
+      const open = () => {
+        menu.classList.add("open");
+        if (overlay) overlay.classList.add("show");
+        toggle.setAttribute("aria-expanded", "true");
+        setNavBodyLock(true);
+      };
       const close = () => {
         menu.classList.remove("open");
         if (overlay) overlay.classList.remove("show");
         toggle.setAttribute("aria-expanded", "false");
+        setNavBodyLock(false);
       };
       toggle.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        if (overlay) overlay.classList.toggle("show");
-        toggle.setAttribute("aria-expanded", menu.classList.contains("open") ? "true" : "false");
+        if (menu.classList.contains("open")) {
+          close();
+        } else {
+          open();
+        }
       });
+      if (closeBtn) closeBtn.addEventListener("click", close);
       if (overlay) overlay.addEventListener("click", close);
       $$("a", menu).forEach((a) => a.addEventListener("click", close));
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && menu.classList.contains("open")) {
+          e.preventDefault();
+          close();
+        }
+      });
+      // Close on outside click (in case overlay is missing)
+      document.addEventListener("click", (e) => {
+        if (!menu.classList.contains("open")) return;
+        if (menu.contains(e.target) || (toggle && toggle.contains(e.target))) return;
+        close();
+      });
     }
   }
 

@@ -37,7 +37,33 @@
     overflow-y: auto;
   }
   html[dir="rtl"] .nav-menu { inset: 0 0 0 auto; transform: translateX(-110%); }
-  .nav-menu.open { transform: translateX(0) !important; }
+.nav-menu.open { transform: translateX(0) !important; }
+  .nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem 0 1rem;
+    margin-bottom: .4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 1.15rem;
+  }
+  .nav-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(138, 90, 43, .08);
+    color: var(--primary);
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    transition: all .25s;
+  }
+  .nav-close:hover { background: var(--primary); color: #fff; }
   .nav-toggle { display: grid; }
   .nav-cta { flex-wrap: wrap; }
 }
